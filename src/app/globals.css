@@ -3,10 +3,52 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --btn-bg: #2997ff;
+  --bg-color: #1d1d1f;
+  --gray-default: #f5f5f7;
+  --gray-100: #94928d;
+  --gray-200: #afafaf;
+  --gray-300: #42424570;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-blue: var(--btn-bg);
+  --color-zinc: var(--bg-color);
   --font-sf-pro: var(--font-sf-pro);
+  --font-sf-pro-display: var(--font-sf-pro-display);
+  --color-gray: var(--gray-default);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+}
+
+@layer utilities {
+  .padding-x {
+    @apply px-4;
+  }
+  .common-padding {
+    @apply sm:py-32 py-20 sm:px-7 px-5;
+  }
+
+  .section-heading {
+    @apply text-gray font-bold lg:text-6xl text-5xl  lg:mb-0 mb-5  opacity-0 translate-y-20;
+  }
+
+  .link {
+    @apply text-blue hover:underline cursor-pointer flex items-center text-xl opacity-0 translate-y-20;
+  }
+
+  .video-carousel_container {
+    @apply relative sm:w-[70vw] max-w-[1200px] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh];
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+}
+
+.screen-max-width {
+  @apply max-w-7xl mx-auto;
 }
